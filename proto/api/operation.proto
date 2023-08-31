@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package api;
+option go_package = "github.com/jamesvincentsiauw-mac/grpc_gateway_demo;grpc_gateway_demo";
+option java_package = "com.github.grpc_gateway_demo";
+option java_multiple_files = true;
+
+import "google/api/annotations.proto";
+
+service OperationService{
+  rpc Operate(OperationRequest) returns (OperationResponse){
+    option (google.api.http) = {
+      get: "/operation"
+    };
+  }
+}
+
+enum Operator {
+  ADDITION = 0;
+  SUBTRACTION = 1;
+  DIVISION = 2;
+  MULTIPLY = 3;
+}
+
+message OperationRequest {
+  uint32 first = 1;
+  uint32 second = 2;
+  Operator operator = 3;
+}
+
+message OperationResponse {
+  float result = 1;
+}
+

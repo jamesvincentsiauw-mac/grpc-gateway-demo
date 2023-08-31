@@ -1,8 +1,8 @@
 syntax = "proto3";
 
 package api;
-option go_package = "github.com/helloworlde/grpc_gateway;grpc_gateway";
-option java_package = "com.github.grpc_gateway";
+option go_package = "github.com/jamesvincentsiauw-mac/grpc_gateway_demo;grpc_gateway_demo";
+option java_package = "com.github.grpc_gateway_demo";
 option java_multiple_files = true;
 
 import "google/api/annotations.proto";

@@ -4,7 +4,7 @@
 // - protoc             (unknown)
 // source: api/hello.proto
 
-package grpc_gateway
+package grpc_gateway_demo
 
 import (
 	context "context"

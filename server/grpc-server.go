@@ -9,6 +9,7 @@ import (
 )
 
 var helloService = service.HelloService{}
+var operationService = service.OperationService{}
 
 func StartGrpcServer() {
 	listener, err := net.Listen("tcp", ":9090")
@@ -18,6 +19,7 @@ func StartGrpcServer() {
 
 	server := grpc.NewServer()
 	pb.RegisterHelloServiceServer(server, &helloService)
+	pb.RegisterOperationServiceServer(server, &operationService)
 
 	log.Println("Start gRPC Server on 0.0.0.0:9090")
 	err = server.Serve(listener)

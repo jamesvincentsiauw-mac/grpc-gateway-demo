@@ -2,11 +2,11 @@
 // source: api/hello.proto
 
 /*
-Package grpc_gateway is a reverse proxy.
+Package grpc_gateway_demo is a reverse proxy.
 
 It translates gRPC into RESTful JSON APIs.
 */
-package grpc_gateway
+package grpc_gateway_demo
 
 import (
 	"context"

@@ -22,6 +22,7 @@ func StartGwServer() {
 
 	mux := runtime.NewServeMux()
 	err = pb.RegisterHelloServiceHandler(context.Background(), mux, conn)
+	err = pb.RegisterOperationServiceHandler(context.Background(), mux, conn)
 
 	if err != nil {
 		log.Fatalln("Failed to register gateway: ", err)
